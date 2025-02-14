@@ -1,0 +1,14 @@
+@import '/src/scss/mixins/mixin';
+@import '/src/scss/mixins/media';
+.seminars {
+  &__title {
+    margin-top: 5rem;
+  }
+  &__items {
+    margin-top: 3rem;
+    @include grid(repeat(5, 1fr) / repeat(2, 1fr), 2rem);
+    @include bigMobile {
+      @include flexbox(column, flex-start, center, 2rem);
+    }
+  }
+}

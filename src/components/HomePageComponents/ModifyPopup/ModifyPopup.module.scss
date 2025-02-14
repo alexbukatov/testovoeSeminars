@@ -1,0 +1,33 @@
+@import '/src/scss/variables/variables';
+@import '/src/scss/variables/font-size';
+@import '/src/scss/mixins/mixin';
+@import '/src/scss/mixins/media';
+.modifyPopup {
+  @include flexbox(column, flex-start, center, 1.5rem);
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 40rem;
+  text-align: center;
+  &__buttonBlock {
+    width: 100%;
+    margin-top: 2rem;
+    @include flexbox(row, space-between, center, null);
+  }
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}

@@ -1,0 +1,44 @@
+@import '/src/scss/variables/variables';
+@import '/src/scss/variables/font-size';
+@import '/src/scss/mixins/mixin';
+@import '/src/scss/mixins/media';
+.notFound {
+  margin-top: 2.5rem;
+  @include flexbox(row, space-between, center, 2rem);
+  @include bigMobile {
+    margin-top: 4rem;
+    @include flexbox(column, center, center, 2rem);
+  }
+  &__textBlock {
+    @include flexbox(column, flex-start, flex-start, 3.2rem);
+    @include bigMobile {
+      @include flexbox(column, center, center, 3rem);
+    }
+  }
+
+  &__textTop {
+    color: rgb(28, 28, 30);
+    font-size: $font-size-l;
+    font-weight: 700;
+    @include tablet {
+      font-size: calc($font-size-l - 0.7rem);
+    }
+  }
+  &__textBottom {
+    color: rgb(75, 75, 75);
+    font-size: $font-size-m;
+    font-weight: 500;
+    @include tablet {
+      font-size: $font-size-s;
+    }
+  }
+  &__button {
+    width: 19.2rem;
+    border-radius: 0.8rem;
+  }
+  &__image {
+    @include tablet {
+      width: 33rem;
+    }
+  }
+}

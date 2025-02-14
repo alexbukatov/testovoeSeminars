@@ -1,0 +1,16 @@
+@import '/src/scss/variables/variables';
+@import '/src/scss/variables/font-size';
+@import '/src/scss/mixins/mixin';
+@import '/src/scss/mixins/media';
+.link {
+  transition: $transition-duration;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $black;
+  &:hover {
+    color: $orange;
+  }
+}
+.active {
+  color: $orange;
+}

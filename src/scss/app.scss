@@ -1,0 +1,57 @@
+@import './libs/fonts';
+@import './libs/normalize';
+@import './mixins/media';
+@import './variables/variables';
+@import './variables/font-size';
+@import './mixins/mixin';
+
+.wrapper {
+  font-family: Ubuntu;
+  background: rgb(245, 244, 255);
+  min-height: 100vh;
+  @include grid(1fr auto / 1fr, null);
+  overflow-x: hidden;
+}
+.container {
+  margin: 0 auto;
+  max-width: 130rem;
+  width: 100%;
+  @include grid(64px 1fr / 1fr, null);
+}
+.content {
+  padding: 0 10px;
+}
+
+h2 {
+  color: $black;
+  font-size: $font-size-xl;
+  font-weight: 700;
+  @media (max-width: 1040px) {
+    font-size: calc($font-size-xl - 1rem);
+  }
+  @include tablet {
+    font-size: $font-size-l;
+  }
+  @include bigMobile {
+    font-size: calc($font-size-l - 0.5rem);
+  }
+}
+
+h3 {
+  color: $black;
+  font-size: $font-size-l;
+  font-weight: 500;
+  @include tablet {
+    font-size: calc($font-size-l - 0.7rem);
+  }
+}
+
+a {
+  transition: $transition-duration;
+  &:hover {
+    color: $orange;
+  }
+  &:focus {
+    color: $orange;
+  }
+}

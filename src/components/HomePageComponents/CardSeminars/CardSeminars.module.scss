@@ -1,0 +1,64 @@
+@import '/src/scss/variables/variables';
+@import '/src/scss/variables/font-size';
+@import '/src/scss/mixins/mixin';
+@import '/src/scss/mixins/media';
+.card {
+  border-radius: 2.8rem;
+  border: 1px solid transparent;
+  box-shadow:
+    0px 2px 4px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 4px 0px rgba(0, 0, 0, 0.08);
+  background: rgb(255, 255, 255);
+  position: relative;
+  &__item {
+    padding: 5rem 3.2rem 3.2rem 3.2rem;
+    height: auto;
+    @include flexbox(row, flex-start, center, 2rem);
+    @media (max-width: 1100px) {
+      @include flexbox(column, flex-start, center, 2rem);
+    }
+    @include bigMobile {
+      max-width: 38rem;
+    }
+    &_image {
+      height: 20rem;
+      width: 20rem;
+    }
+    &_textBlock {
+      height: 20rem;
+      @include flexbox(column, space-between, flex-start, null);
+    }
+    &_desc {
+      margin-top: 2rem;
+      font-size: $font-size-s;
+    }
+    &_date {
+      font-weight: 500;
+      font-size: $font-size-s;
+    }
+  }
+  &__buttonBlock {
+    @include flexbox(row, space-between, center, null);
+    width: 97%;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    left: 1rem;
+    &_modify {
+      opacity: 0.5;
+      transition: $transition-duration;
+      &:hover {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+    &_clear {
+      opacity: 0.5;
+      transition: $transition-duration;
+      &:hover {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+  }
+}

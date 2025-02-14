@@ -1,0 +1,1 @@
+export { CardSeminars } from "./CardSeminars";

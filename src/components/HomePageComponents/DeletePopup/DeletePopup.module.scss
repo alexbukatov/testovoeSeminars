@@ -1,0 +1,19 @@
+@import '/src/scss/variables/font-size';
+@import '/src/scss/mixins/mixin';
+@import '/src/scss/variables/variables';
+.popup {
+  &__text {
+    font-size: $font-size-s;
+  }
+  &__buttonBlock {
+    margin-top: 2rem;
+    @include flexbox(row, space-between, center, null);
+  }
+  &__buttonClose {
+    width: 9rem;
+  }
+  &__buttonDelete {
+    width: 9rem;
+    background-color: $red;
+  }
+}
